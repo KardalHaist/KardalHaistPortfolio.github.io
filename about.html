@@ -1,45 +1,93 @@
-<div class="about-section">
-2
-<h1 class="about-title">About Me</h1>
-3
- 
-4
-<p class="about-text">
-5
-As an Electrical Engineering student at Florida Institute of Technology, I am developing my skills in electrical design, digital electronics, and automation while building a strong technical foundation for my future career. Engineering appeals to me because it combines creativity and problem solving to create solutions that have a real impact on the world around us. My growing interest in Revit MEP Electrical Design and Building Information Modeling (BIM) has also introduced me to the role engineering plays in designing and supporting modern infrastructure.
-6
-</p>
-7
- 
-8
-<p>
-9
-What motivates me most is the opportunity to learn and continuously improve. I enjoy taking systems apart, understanding how they work, and applying that knowledge to develop new ideas and solutions. Whether through coursework, independent research, or personal projects, I am always looking for opportunities to expand my technical knowledge and challenge myself.
-10
-</p>
-11
- 
-12
-<p>
-13
-Throughout my education and personal projects, I have developed experience with electrical design software, digital electronics, CAD tools, and engineering problem solving. Recent projects include Revit electrical design work, a custom FPV drone project built on a limited budget, and a window cleaning robot currently in development. I have also completed LinkedIn Learning's Revit for Electrical Design Professional preparation course to further strengthen my understanding of industry design practices.
-14
-</p>
-15
- 
-16
-<p>
-17
-Beyond engineering, I serve as Treasurer of the Florida Tech Surf Club, where I have gained experience in leadership, budgeting, organization, and teamwork. Working with other students and helping support club activities has strengthened many of the communication and collaboration skills that are essential in engineering environments.
-18
-</p>
-19
- 
-20
-<p>
-21
-As I continue my education, my goal is to gain practical industry experience while expanding my knowledge of electrical design, automation, and emerging technologies. This portfolio serves as a record of my projects, technical development, and professional growth as I work toward a career in electrical engineering.
-22
-</p>
-23
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-header">
+    <div class="site-header-text">
+      <p class="site-header-title">Kardal Haist</p>
+      <span class="site-header-subtitle">Electrical Engineering Student @ Florida Institute of Technology</span>
+    </div>
+    <a href="index.html">
+      <img class="site-header-profile-picture" src="assets/pictures/pp.jpg" alt="Profile picture of Kardal Haist">
+    </a>
+  </div>
+  <nav class="nav-bar">
+    <div class="nav-toggle" id="navToggle" aria-label="Open navigation" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-tabs" id="navTabs">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navTabs = document.getElementById('navTabs');
+    navToggle.addEventListener('click', () => {
+      navTabs.classList.toggle('open');
+      if (window.innerWidth <= 700) {
+        document.body.classList.toggle('menu-open', navTabs.classList.contains('open'));
+      }
+    });
+    navToggle.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navTabs.classList.toggle('open');
+      }
+    });
+    navTabs.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 700) navTabs.classList.remove('open');
+      });
+    });
+  </script>
+  <div class="about-section">
+    <h1 class="about-title">About me</h1>
+    <p class="about-text">
+     As an Electrical Engineering student at Florida Institute of Technology, I am developing my skills in electrical design, digital electronics, robotics, and automation while building a strong technical foundation for my future career. Engineering appeals to me because it combines creativity and problem solving to create practical solutions for real-world challenges. My growing interest in Revit MEP Electrical Design and Building Information Modeling has also introduced me to the important role engineers play in designing modern building systems and infrastructure.
+    </p>
+    <p>
+      What motivates me most is the opportunity to learn and continuously improve. I enjoy understanding how systems work, finding ways to improve them, and applying that knowledge to new ideas. Whether through coursework, independent learning, or hands-on projects, I look for opportunities to expand my technical knowledge and challenge myself as an engineering student.
+    </p>
+    <p>
+      Throughout my education and personal projects, I have developed experience with electrical design software, digital electronics, CAD tools, and engineering problem solving. My recent work includes Revit electrical design projects, a custom FPV drone project developed on a limited budget, and a window-cleaning robot currently in development. I have also completed LinkedIn Learning's Cert Prep: Revit for Electrical Design Professional course to strengthen my understanding of electrical design practices and industry workflows.
+    </p>
+    <p>
+      Outside of engineering, I serve as Treasurer of the Florida Tech Surf Club, where I have gained experience with budgeting, organization, teamwork, and leadership. These responsibilities have helped me strengthen the communication and collaboration skills that are important in both student organizations and professional engineering environments.
+    <p>
+      As I continue my education, my goal is to gain practical industry experience while expanding my knowledge of electrical design, automation, and emerging technologies. This portfolio documents my projects, technical development, leadership experience, and professional growth as I work toward a career in electrical engineering.
+  </div>
+  <footer class="site-footer">
+    <p>© 2026 Kardal Haist &mdash; Electrical Engineering Student @ Florida Tech</p>
+    <p>
+      <a href="index.html" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span class="footer-link-text">Home</span>
+      </a> |
+      <a href="https://github.com/aallonas" target="_blank" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+        <span class="footer-link-text">GitHub</span>
+      </a> |
+      <a href="https://linkedin.com/in/alexandre-allonas-ba664b207" target="_blank" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+        <span class="footer-link-text">LinkedIn</span>
+      </a> |
+      <a href="contact.html" class="footer-link">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M21 6.5a2.5 2.5 0 0 0-2.5-2.5h-13A2.5 2.5 0 0 0 3 6.5v11A2.5 2.5 0 0 0 5.5 20h13a2.5 2.5 0 0 0 2.5-2.5v-11zm-2.5-.5a.5.5 0 0 1 .5.5v.379l-8 5.333-8-5.333V6a.5.5 0 0 1 .5-.5h15zm.5 12a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V8.121l7.5 5 7.5-5V18z"/></svg>
+        <span class="footer-link-text">Contact</span>
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
