@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This is my personal portfolio showcasing my journey as a Mechatronics Engineering student. It highlights my skills, projects, and experiences and serves as a project in itself.
+This is my personal portfolio showcasing my journey as a Electrical Engineering student. It highlights my skills, projects, and experiences.
 
 
 ## View Portfolio

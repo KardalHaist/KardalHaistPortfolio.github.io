@@ -1098,3 +1098,18 @@ article.project .project-header {
   text-decoration: none;
   color: #eee;
 }
+.site-header > a {
+2
+margin-left: auto;
+3
+}
+4
+ 
+5
+.site-header-profile-picture {
+6
+object-fit: cover;
+7
+object-position: center;
+8
+}
