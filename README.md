@@ -5,7 +5,7 @@ This is my personal portfolio showcasing my journey as a Electrical Engineering 
 
 ## View Portfolio
 
-Visit [My Website](https://www.alexandre-allonas.fr) or clone the repository:
+Visit [My Website]((https://kardalhaist.github.io/KardalHaistPortfolio.github.io/index.html)) or clone the repository:
 
 ```bash
 $ git clone https://github.com/aallonas/Portfolio.git
